@@ -1,109 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Admin - Dashboard</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/admin.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Administrador - Politech</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/global.css">
 </head>
-<body>
-  <div class="d-flex">
-    <!-- Sidebar -->
-    <aside class="sidebar bg-light p-3">
-      <div class="mb-4 text-center">
-        <img src="../assets/img/logo-circle.png" alt="logo" class="logo-circle mb-2">
-        <div><strong>Politech</strong></div>
-      </div>
-      <ul class="nav flex-column">
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Usuarios</a></li>
-        <li class="nav-item"><a class="nav-link active" href="#">Servicios</a></li>
-      </ul>
-    </aside>
+<body class="bg-light">
 
-    <!-- Main -->
-    <main class="flex-grow-1 p-4">
-      <div class="d-flex justify-content-between align-items-center mb-3">
-        <h4>Dashboard - Servicios</h4>
-        <button id="btnAddService" class="btn btn-primary">Agregar</button>
-      </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-dark px-3">
+    <a class="navbar-brand fw-bold text-white" href="#">Dashboard Admin</a>
+    <button id="logoutBtn" class="btn btn-danger btn-sm">Cerrar sesión</button>
+  </nav>
 
-      <div class="table-responsive">
-        <table class="table table-striped table-hover align-middle" id="servicesTable">
-          <thead>
-            <tr>
-              <th>Imagen</th>
-              <th>id</th>
-              <th>Nombre servicio</th>
-              <th>Precio</th>
-              <th>Cantidad</th>
-              <th>Promoción</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- inyectado por admin.js -->
-          </tbody>
-        </table>
-      </div>
-    </main>
-  </div>
-
-  <!-- Modal: add/edit service -->
-  <div class="modal fade" id="serviceModal" tabindex="-1">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content p-3">
-        <div class="modal-header">
-          <h5 id="modalTitle" class="modal-title">Crear servicio</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <nav class="col-md-3 col-lg-2 d-md-block bg-white sidebar shadow-sm vh-100">
+        <div class="position-sticky pt-3">
+          <h6 class="sidebar-heading px-3 mt-3 mb-1 text-muted">Gestión</h6>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">
+                <i class="bi bi-people"></i> Usuarios
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bi bi-gear"></i> Servicios
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="modal-body">
-          <form id="serviceForm">
-            <input type="hidden" id="serviceId">
-            <div class="row g-3">
-              <div class="col-md-6">
-                <label>Nombre</label>
-                <input id="serviceName" class="form-control" required>
-              </div>
-              <div class="col-md-6">
-                <label>Precio</label>
-                <input id="servicePrice" class="form-control" type="number" required>
-              </div>
-              <div class="col-md-6">
-                <label>Cantidad</label>
-                <input id="serviceQty" class="form-control" type="number" required>
-              </div>
-              <div class="col-md-6">
-                <label>Promoción</label>
-                <select id="servicePromo" class="form-select">
-                  <option value="false">No</option>
-                  <option value="true">Sí</option>
-                </select>
-              </div>
-              <div class="col-12">
-                <label>Imagen URL</label>
-                <input id="serviceImg" class="form-control" placeholder="assets/img/placeholder.png">
-              </div>
-              <div class="col-12">
-                <label>Descripción</label>
-                <textarea id="serviceDesc" class="form-control" rows="3"></textarea>
+      </nav>
+
+      <!-- Contenido principal -->
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+        <h2 class="fw-bold">Bienvenido, Administrador</h2>
+        <p class="text-muted">Desde aquí puedes gestionar usuarios y servicios.</p>
+
+        <!-- Tarjetas resumen -->
+        <div class="row g-3">
+          <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm border-0">
+              <div class="card-body">
+                <h5 class="card-title">Usuarios registrados</h5>
+                <p class="card-text fs-4 fw-bold" id="usuariosCount">0</p>
               </div>
             </div>
-          </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm border-0">
+              <div class="card-body">
+                <h5 class="card-title">Servicios activos</h5>
+                <p class="card-text fs-4 fw-bold" id="serviciosCount">0</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="modal-footer">
-          <button id="saveService" class="btn btn-success">Guardar</button>
-          <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+
+        <!-- Tabla de ejemplo -->
+        <div class="card mt-4 shadow-sm border-0">
+          <div class="card-body">
+            <h5 class="card-title">Últimos usuarios</h5>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Email</th>
+                  <th>Teléfono</th>
+                </tr>
+              </thead>
+              <tbody id="usuariosTable">
+                <tr>
+                  <td colspan="3" class="text-center">No hay usuarios registrados</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-      </div>
+      </main>
     </div>
   </div>
 
-  <!-- scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../js/main.js"></script>
-  <script src="../js/admin.js"></script>
+  <!--<script src="/js/dashboard.js"></script> -->
 </body>
 </html>
