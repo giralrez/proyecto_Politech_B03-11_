@@ -1,3 +1,8 @@
+body {
+  padding-top: 120px; 
+}
+
+
 /* Botón "Disponible" */
 .btn-disponible {
   background: transparent;
@@ -26,10 +31,6 @@
 
 .btn-contratar:hover {
   background-color: rgb(44, 124, 128); /* acento */
-}
-
-.fw-bold {
-  margin-top: 129px;
 }
 
 
