@@ -1,0 +1,5 @@
+:root{--accent:#6c63ff;--bg:#f2f2f2;--font:'Poppins',sans-serif}
+body{font-family:var(--font);background:var(--bg);margin:0}
+.sidebar{width:220px;min-height:100vh;border-right:1px solid rgba(0,0,0,0.05)}
+.logo-circle{width:56px;height:56px;border-radius:50%;}
+.table img{width:48px;height:48px;object-fit:cover;border-radius:6px}

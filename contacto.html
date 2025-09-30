@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politech - Contacto</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS Global y Home -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">
+      <img id="logonav" src="assets/logotipo1.png" alt="Politech Logo">
+    </a>
+
+    <!-- Botón responsive -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Contenido Navbar -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Links centrados -->
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <!-- Botones a la derecha -->
+      <div class="d-flex">
+        <a href="#" class="btn btn-login me-2">iniciar sesión</a>
+        <a href="#" class="btn btn-register">registrarse</a>
+        </div>
+
+    </div>
+  </div>
+</nav>
+
+
+  <!-- CONTACTO -->
+  <section class="container my-5 pt-5">
+    <div id="formularioContacto" class="row">
+      <!-- Formulario -->
+      <div class="col-md-6">
+        <h2 class="fw-bold mb-4">Contáctanos</h2>
+        <p class="text-muted">Déjanos tus datos y nos pondremos en contacto contigo.</p>
+        <form id="formContacto">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre completo</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Ej: Juan Pérez">
+          </div>
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="correo" placeholder="Ej: juan@mail.com">
+          </div>
+          <div class="mb-3">
+            <label for="telefono" class="form-label">Teléfono</label>
+            <input type="tel" class="form-control" id="telefono" placeholder="Ej: +57 300 123 4567">
+          </div>
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu consulta aquí..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-register">Enviar</button>
+        </form>
+
+        <!-- Datos de contacto simulados -->
+        <div class="mt-4">
+          <h5 class="fw-semibold">Información de contacto</h5>
+          <p><i class="bi bi-geo-alt"></i> Carrera 7 # 45-89, Bogotá D.C.</p>
+          <p><i class="bi bi-telephone"></i> +57 (1) 745 6789</p>
+          <p><i class="bi bi-envelope"></i> contacto@politech.com</p>
+          <p><i class="bi bi-clock"></i> Lunes - Viernes: 8:00 am - 6:00 pm</p>
+        </div>
+      </div>
+
+      <!-- Mapa -->
+      <div class="col-md-6">
+        <h2 class="fw-bold mb-4">Ubícanos</h2>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.819486124865!2d-74.06364462504936!3d4.639386742227748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99c9e9ff49d7%3A0x1f8a50c75e8e1a64!2sPolitecnico%20Grancolombiano!5e0!3m2!1ses-419!2sco!4v1698537259845!5m2!1ses-419!2sco" 
+          width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+ 
+<script src="js/contacto.js"></script>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <!-- Logo -->
+        <div class="col-md-3 mb-3">
+          <img id="logoFooter" src="/assets/logotipo1.png" alt="Politech Logo" style="height: 60px;">
+          <div class="mt-3">
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Enlaces -->
+        <div class="col-md-3 mb-3">
+          <h6 class="fw-bold">Enlaces</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">UI design</a></li>
+            <li><a href="#">UX design</a></li>
+            <li><a href="#">Wireframing</a></li>
+            <li><a href="#">Diagramming</a></li>
+            <li><a href="#">Brainstorming</a></li>
+            <li><a href="#">Online whiteboard</a></li>
+          </ul>
+        </div>
+
+        <!-- Explorar -->
+        <div class="col-md-3 mb-3">
+          <h6 class="fw-bold">Explorar</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">Design</a></li>
+            <li><a href="#">Prototyping</a></li>
+            <li><a href="#">Development tools</a></li>
+            <li><a href="#">Design system</a></li>
+            <li><a href="#">Collaboration</a></li>
+            <li><a href="#">Design process</a></li>
+          </ul>
+        </div>
+
+        <!-- Mapa -->
+        <div class="col-md-3 mb-3">
+          <h6 class="fw-bold">Ubicación</h6>
+          <p><iframe id="map-canvas" class="map_part" width="600"  height="450"  frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=en&amp;q=bogota&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">Powered by <a href="https://www.googlemapsgenerator.com/">embed google maps html</a> and <a href="https://allabeviljas.se/">sms lån som beviljar alla</a></iframe></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</body>
+</html>
+

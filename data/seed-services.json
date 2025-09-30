@@ -1,0 +1,12 @@
+[
+  {"id":"1","name":"Soporte Técnico Remoto 24/7","price":350000,"quantity":10,"on_promotion":false,"image":"assets/img/service-1.jpg","description":"Atención inmediata para resolver incidentes técnicos en cualquier momento."},
+  {"id":"2","name":"Desarrollo de Aplicaciones Web","price":2400000,"quantity":5,"on_promotion":true,"image":"assets/img/service-2.jpg","description":"Aplicaciones a la medida para optimizar procesos internos y externos."},
+  {"id":"3","name":"Implementación de Infraestructura en la Nube","price":2800000,"quantity":3,"on_promotion":false,"image":"assets/img/service-3.jpg","description":"Migración y configuración de servidores seguros en la nube."},
+  {"id":"4","name":"Consultoría en Transformación Digital","price":1200000,"quantity":6,"on_promotion":false,"image":"assets/img/service-4.jpg","description":"Asesoría integral para implementar soluciones digitales en tu empresa."},
+  {"id":"5","name":"Ciberseguridad Empresarial","price":2000000,"quantity":2,"on_promotion":true,"image":"assets/img/service-5.jpg","description":"Evaluación y fortalecimiento de la seguridad de la infraestructura."},
+  {"id":"6","name":"Integración de APIs y Automatización","price":900000,"quantity":8,"on_promotion":false,"image":"assets/img/service-6.jpg","description":"Conectar sistemas para reducir trabajo manual y errores."},
+  {"id":"7","name":"Desarrollo de Apps Móviles","price":2200000,"quantity":4,"on_promotion":false,"image":"assets/img/service-7.jpg","description":"Aplicaciones móviles nativas e híbridas para iOS y Android."},
+  {"id":"8","name":"Monitoreo y Soporte DevOps","price":1500000,"quantity":5,"on_promotion":false,"image":"assets/img/service-8.jpg","description":"Automatización de despliegues y monitoreo continuo."},
+  {"id":"9","name":"Diseño UX/UI","price":700000,"quantity":10,"on_promotion":false,"image":"assets/img/service-9.jpg","description":"Diseños centrados en la experiencia del usuario."},
+  {"id":"10","name":"Data Analytics y BI","price":1800000,"quantity":3,"on_promotion":true,"image":"assets/img/service-10.jpg","description":"Implementación de pipelines y dashboards para toma de decisiones."}
+]

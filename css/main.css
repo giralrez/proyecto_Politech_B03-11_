@@ -1,0 +1,20 @@
+:root{
+  --accent:#6c63ff;
+  --danger:#b30000;
+  --muted:#6c6c6c;
+  --bg:#f7f7fb;
+  --font: 'Poppins', sans-serif;
+}
+
+*{box-sizing:border-box}
+body{font-family:var(--font);background:var(--bg);color:#222}
+.logo-circle{width:46px;height:46px;border-radius:50%;}
+.hero{height:420px;overflow:hidden}
+.hero .carousel-caption{left:6%;bottom:40%;text-align:left}
+.hero img{object-fit:cover;height:420px;opacity:0.95}
+.card{border-radius:8px}
+.btn-primary{background:var(--accent);border:var(--accent)}
+.btn-primary:hover{opacity:0.9}
+.services-card{background:#fff;border-radius:10px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+.service-title{font-weight:600}
+footer{background:#fff}

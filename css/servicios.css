@@ -1,0 +1,39 @@
+/* Botón "Disponible" */
+.btn-disponible {
+  background: transparent;
+  border: none;
+  color: #353434; /* gris oscuro */
+  font-weight: 400;
+  text-transform: lowercase;
+  transition: color 0.3s ease;
+}
+
+.btn-disponible:hover {
+  color: rgb(44, 124, 128); /* acento en hover */
+}
+
+/* Botón "Contratar" */
+.btn-contratar {
+  background-color: #353434; /* negro/gris oscuro */
+  border: none;
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: 500;
+  text-transform: lowercase;
+  padding: 6px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-contratar:hover {
+  background-color: rgb(44, 124, 128); /* acento */
+}
+
+.fw-bold {
+  margin-top: 129px;
+}
+
+
+.container.text-center.mt-5.pt-5 {
+  color: rgb(79, 77, 77);
+}
+
