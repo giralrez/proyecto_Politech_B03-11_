@@ -9,14 +9,20 @@ form.addEventListener('submit', function(e) {
     nombre: document.getElementById('nombre').value,
     email: document.getElementById('email').value,
     password: document.getElementById('password').value,
-    telefono: document.getElementById('telefono').value
+    telefono: document.getElementById('telefono').value,
+    rol: document.getElementById('rol') ? document.getElementById('rol').value : "user" 
+    // si hay select de rol, lo toma, si no, lo deja como "user"
   };
 
-  // Guardar en Local Storage
-  localStorage.setItem('usuario', JSON.stringify(userData));
+  // Obtener usuarios existentes o array vacío
+  let users = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+  // Guardar nuevo usuario
+  users.push(userData);
+  localStorage.setItem('usuarios', JSON.stringify(users));
 
   // Mostrar mensaje de éxito
-  mensaje.textContent = "✅ Usuario registrado correctamente (simulación)";
+  mensaje.textContent = `✅ Usuario ${userData.rol} registrado correctamente (simulación)`;
   mensaje.classList.remove("d-none");
 
   // Limpiar formulario
