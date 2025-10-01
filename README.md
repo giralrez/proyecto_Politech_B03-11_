@@ -1,5 +1,14 @@
 # Proyecto Politech B03-11
 
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+
+---
+
 Este es el repositorio oficial del proyecto **Politech**, desarrollado como parte del taller de Frontend.  
 En esta primera entrega se presenta la **estructura inicial del sitio web**, construida con **HTML, CSS, JavaScript y Bootstrap 5**.  
 
@@ -7,7 +16,16 @@ El proyecto está orientado a la construcción de un sitio web corporativo para 
 
 ---
 
-##  Vistas desarrolladas en esta entrega
+## 📑 Índice
+- [Vistas desarrolladas](#vistas-desarrolladas-en-esta-entrega)
+- [Estructura de archivos](#estructura-de-archivos)
+- [Tecnologías utilizadas](#tecnologías-utilizadas)
+- [Próximos pasos](#próximos-pasos-siguientes-entregas)
+- [Repositorio](#repositorio)
+
+---
+
+## 🖥️ Vistas desarrolladas en esta entrega
 
 - **Inicio (`index.html`)**: Página principal con presentación general de la empresa.  
 - **Servicios (`servicios.html`)**: Sección que describe los servicios de Politech y acceso a cada detalle.  
@@ -20,7 +38,7 @@ El proyecto está orientado a la construcción de un sitio web corporativo para 
 
 ---
 
-##  Estructura de archivos
+## 📂 Estructura de archivos
 
 ```plaintext
 proyecto_Politech_B03-11_/
@@ -51,6 +69,7 @@ proyecto_Politech_B03-11_/
 ├── servicio2.html
 ├── ...
 └── servicio10.html
+
 
 ```
 
