@@ -1,0 +1,23 @@
+-- politech_schema.sql
+CREATE DATABASE IF NOT EXISTS politech CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE politech;
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  email VARCHAR(150) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  rol ENUM('admin','user') NOT NULL DEFAULT 'user',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS servicios (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(150) NOT NULL,
+  precio DECIMAL(10,2) NOT NULL DEFAULT 0,
+  imagen VARCHAR(255),
+  descripcion TEXT,
+  cantidad INT DEFAULT 0,
+  promocion TINYINT(1) DEFAULT 0,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

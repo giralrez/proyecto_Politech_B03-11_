@@ -4,6 +4,31 @@
 
 /* Texto principal */
 
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --color-primary: #4e4f51;   /* ajusta con tu paleta */
+  --color-secondary: #020202; /* ajusta con tu paleta */
+  --color-dark: #1a1a1a;
+  --color-light: #f5f5f5;
+}
+body {
+  padding-top: 80px; /* Ajusta según la altura real de la navbar */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url("../assets/fondo1.jpg");
+  background: 0.8;
+  background-size: cover;
+  color: var(--color-dark);
+  ;
+}
 #hero {
   margin-top: 150px;
 }

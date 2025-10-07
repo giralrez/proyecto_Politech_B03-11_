@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Administrador - Politech</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="/css/dasboard.css">
+  <style>
+  
+  </style>
+</head>
+<body class="bg-light">
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <nav class="col-md-3 col-lg-2 d-md-block sidebar p-3">
+        <div class="position-sticky pt-3">
+          <h4 class="mb-4">
+            <i class="bi bi-lightning-charge-fill"></i> Politech
+          </h4>
+          
+          <div class="mb-4">
+            <small class="text-white-50">Bienvenido</small>
+            <p class="mb-0 fw-bold" id="nombreAdmin">Administrador</p>
+          </div>
+          
+          <h6 class="sidebar-heading px-3 mt-3 mb-1 text-white-50">Gestión</h6>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="#" data-section="dashboard">
+                <i class="bi bi-speedometer2"></i> Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-section="servicios">
+                <i class="bi bi-grid"></i> Servicios
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-section="usuarios">
+                <i class="bi bi-people"></i> Usuarios
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">
+                <i class="bi bi-house"></i> Ver Sitio Web
+              </a>
+            </li>
+          </ul>
+          
+          <div class="position-absolute bottom-0 start-0 p-3 w-100">
+            <button class="btn btn-outline-light w-100" id="logoutBtn">
+              <i class="bi bi-box-arrow-right"></i> Cerrar Sesión
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Contenido principal -->
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+        
+        <!-- SECCIÓN DASHBOARD -->
+        <div id="section-dashboard" class="content-section">
+          <h2 class="fw-bold mb-4">Dashboard</h2>
+          
+          <!-- Tarjetas resumen -->
+          <div class="row g-4 mb-4">
+            <div class="col-md-6 col-lg-3">
+              <div class="card stat-card text-white bg-primary">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <h6 class="card-subtitle mb-2">Total Servicios</h6>
+                      <h2 class="mb-0" id="totalServicios">-</h2>
+                    </div>
+                    <i class="bi bi-grid-3x3-gap-fill" style="font-size: 2.5rem; opacity: 0.3;"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+              <div class="card stat-card text-white bg-success">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <h6 class="card-subtitle mb-2">Activos</h6>
+                      <h2 class="mb-0" id="serviciosActivos">-</h2>
+                    </div>
+                    <i class="bi bi-check-circle-fill" style="font-size: 2.5rem; opacity: 0.3;"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+              <div class="card stat-card text-white bg-warning">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <h6 class="card-subtitle mb-2">En Promoción</h6>
+                      <h2 class="mb-0" id="serviciosPromocion">-</h2>
+                    </div>
+                    <i class="bi bi-percent" style="font-size: 2.5rem; opacity: 0.3;"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+              <div class="card stat-card text-white bg-info">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <h6 class="card-subtitle mb-2">Usuarios</h6>
+                      <h2 class="mb-0" id="usuariosCount">-</h2>
+                    </div>
+                    <i class="bi bi-people-fill" style="font-size: 2.5rem; opacity: 0.3;"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECCIÓN SERVICIOS -->
+        <div id="section-servicios" class="content-section d-none">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fw-bold">Gestión de Servicios</h2>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalServicio">
+              <i class="bi bi-plus-circle"></i> Nuevo Servicio
+            </button>
+          </div>
+          
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Imagen</th>
+                      <th>Nombre</th>
+                      <th>Precio</th>
+                      <th>Stock</th>
+                      <th>Estado</th>
+                      <th>Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tablaServicios">
+                    <tr>
+                      <td colspan="7" class="text-center py-4">
+                        <div class="spinner-border text-primary" role="status">
+                          <span class="visually-hidden">Cargando...</span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECCIÓN USUARIOS -->
+        <div id="section-usuarios" class="content-section d-none">
+          <h2 class="fw-bold mb-4">Gestión de Usuarios</h2>
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Teléfono</th>
+                    <th>Fecha Registro</th>
+                  </tr>
+                </thead>
+                <tbody id="usuariosTable">
+                  <tr>
+                    <td colspan="4" class="text-center text-muted py-4">
+                      Próximamente: gestión completa de usuarios
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- MODAL CREAR/EDITAR SERVICIO -->
+  <div class="modal fade" id="modalServicio" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitle">Nuevo Servicio</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formServicio">
+            <input type="hidden" id="servicioId">
+            
+            <div class="row">
+              <div class="col-md-8 mb-3">
+                <label for="nombre" class="form-label">Nombre *</label>
+                <input type="text" class="form-control" id="nombre" required>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="precio" class="form-label">Precio (COP) *</label>
+                <input type="number" class="form-control" id="precio" step="0.01" required>
+              </div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="descripcion_corta" class="form-label">Descripción Corta</label>
+              <input type="text" class="form-control" id="descripcion_corta" maxlength="255">
+            </div>
+            
+            <div class="mb-3">
+              <label for="descripcion" class="form-label">Descripción *</label>
+              <textarea class="form-control" id="descripcion" rows="3" required></textarea>
+            </div>
+            
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <label for="imagen" class="form-label">Imagen</label>
+                <input type="text" class="form-control" id="imagen" placeholder="1.png">
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="cantidad_disponible" class="form-label">Stock</label>
+                <input type="number" class="form-control" id="cantidad_disponible" value="1">
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="disponibilidad" class="form-label">Disponibilidad</label>
+                <select class="form-select" id="disponibilidad">
+                  <option>Calendario</option>
+                  <option>Lunes a Viernes</option>
+                  <option>Fines de Semana</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="en_promocion">
+                  <label class="form-check-label" for="en_promocion">En Promoción</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="descuento_porcentaje" class="form-label">% Descuento</label>
+                <input type="number" class="form-control" id="descuento_porcentaje" value="0" min="0" max="100">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

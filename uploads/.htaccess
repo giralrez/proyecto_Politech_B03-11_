@@ -1,0 +1,4 @@
+# Denegar ejecución de scripts
+<FilesMatch "\.(php|pl|py|jsp|asp|sh|cgi)$">
+  Require all denied
+</FilesMatch>

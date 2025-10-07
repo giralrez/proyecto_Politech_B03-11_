@@ -18,7 +18,7 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: url("/assets/fondo1.jpg");
+  background: url("../assets/fondo1.jpg");
   background: 0.8;
   background-size: cover;
   color: var(--color-dark);
